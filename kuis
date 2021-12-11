@@ -1,0 +1,214 @@
+#include <iostream>
+#include <ncurses.h>
+#include <windows.h>
+#include <string.h>
+using namespace std;
+
+void loading(){
+	initscr();
+	
+	WINDOW * win = newwin (21, 37, 5, 10);
+	refresh();
+	box(win, 0, 0);
+	refresh();
+	
+	start_color();
+	init_pair(1,COLOR_WHITE,COLOR_WHITE);
+	
+	mvwprintw(win, 9, 13, "Loading...");
+	wrefresh(win);
+	
+	wattron(win,COLOR_PAIR(1));
+	mvwprintw(win, 10, 10, ".");
+	wrefresh(win);
+	Sleep(100);
+	mvwprintw(win, 10, 11, ".");
+	wrefresh(win);
+	Sleep(100);
+	mvwprintw(win, 10, 12, ".");
+	wrefresh(win);
+	Sleep(100);
+	mvwprintw(win, 10, 13, ".");
+	wrefresh(win);
+	Sleep(500);
+	mvwprintw(win, 10, 14, "..");
+	wrefresh(win);
+	Sleep(100);
+	mvwprintw(win, 10, 16, ".");
+	wrefresh(win);
+	Sleep(100);
+	mvwprintw(win, 10, 17, ".");
+	wrefresh(win);
+	Sleep(100);
+	mvwprintw(win, 10, 18, ".");
+	wrefresh(win);
+	Sleep(100);
+	mvwprintw(win, 10, 19, ".");
+	wrefresh(win);
+	Sleep(100);
+	mvwprintw(win, 10, 20, ".");
+	wrefresh(win);
+	Sleep(400);
+	mvwprintw(win, 10, 21, "...");
+	wrefresh(win);
+	Sleep(100);
+	mvwprintw(win, 10, 24, ".");
+	wrefresh(win);
+	Sleep(100);
+	
+	wattroff(win,COLOR_PAIR(1));
+	
+}
+
+int main(){
+	initscr();
+	
+	WINDOW * win = newwin (21, 37, 5, 10);
+	refresh();
+	box(win, 0, 0);
+	refresh();
+	
+	start_color();
+	init_pair(1,COLOR_WHITE,COLOR_WHITE);
+	
+	wattron(win,COLOR_PAIR(1));
+	
+	
+	//huruf Q
+	mvwprintw(win, 2, 9, "....");
+	wrefresh(win);
+	
+	mvwprintw(win, 3, 9, ".");
+	wrefresh(win);
+	
+	mvwprintw(win, 4, 9, ".");
+	wrefresh(win);
+	
+	mvwprintw(win, 5, 9, ".....");
+	wrefresh(win);
+	
+	mvwprintw(win, 4, 12, ".");
+	wrefresh(win);
+	
+	mvwprintw(win, 3, 12, ".");
+	wrefresh(win);
+	
+	//huruf U
+	mvwprintw(win, 2, 15, ".");
+	wrefresh(win);
+	
+	mvwprintw(win, 3, 15, ".");
+	wrefresh(win);
+	
+	mvwprintw(win, 4, 15, ".");
+	wrefresh(win);
+	
+	mvwprintw(win, 5, 15, "....");
+	wrefresh(win);
+	
+	mvwprintw(win, 4, 18, ".");
+	wrefresh(win);
+	
+	mvwprintw(win, 3, 18, ".");
+	wrefresh(win);
+	
+	mvwprintw(win, 2, 18, ".");
+	wrefresh(win);
+	
+	//huruf I
+	mvwprintw(win, 2, 20, "...");
+	wrefresh(win); 
+	
+	mvwprintw(win, 3, 21, ".");
+	wrefresh(win);
+	
+	mvwprintw(win, 4, 21, ".");
+	wrefresh(win);
+	
+	mvwprintw(win, 5, 20, "...");
+	wrefresh(win);
+	
+	//huruf Z
+	mvwprintw(win, 2, 24, "....");
+	wrefresh(win);
+	
+	mvwprintw(win, 3, 26, ".");
+	wrefresh(win);
+	
+	mvwprintw(win, 4, 25, ".");
+	wrefresh(win);
+	
+	mvwprintw(win, 5, 24, "....");
+	wrefresh(win);
+	
+	//garis
+	mvwprintw(win, 8, 1, "...................................");
+	wrefresh(win);
+	
+	wattroff(win,COLOR_PAIR(1));
+	
+	//pilihan
+	string pilih[3] = {"1.START", "2.HIGH SCORE", "3.EXIT"};
+	
+	mvwprintw(win, 10, 15, pilih[0].c_str());
+	wrefresh(win);
+	
+	mvwprintw(win, 11, 12, pilih[1].c_str());
+	wrefresh(win);
+	
+	mvwprintw(win, 12, 15, pilih[2].c_str());
+	wrefresh(win);
+	
+	mvwprintw(win, 16, 1, "type 1 for start, 2 for high score,");
+	wrefresh(win);
+	
+	mvwprintw(win, 17, 1, "3 for exit");
+	wrefresh(win);
+	
+	wattron(win, A_REVERSE);
+	mvwprintw(win, 18, 1, "type a code:");
+	wrefresh(win);
+	wattroff(win, A_REVERSE);
+	char x = wgetch(win);
+	wprintw(win, "%c",x);
+	Sleep(500);
+	wclear(win);
+	
+	loading();
+	
+	int hp = 3;
+	int score = 0;
+	
+	box(win, 0, 0);
+	refresh();
+	
+	if(x=='1'){
+	//start
+		mvwprintw(win, 3, 1, "*can only character letters");
+		mvwprintw(win, 4, 1, "press ENTER if finish");
+		mvwprintw(win, 1, 1, "masukkan username anda: ");
+		wrefresh(win);
+		char nama = wgetch(win);
+		wprintw(win, "%c",nama);
+		wclear(win);
+		loading();
+		
+		if(hp>0){
+			box(win, 0, 0);
+			refresh();
+			
+			wattron(win, A_REVERSE);
+			mvwprintw(win, 0, 1, "%c",nama);
+			wrefresh(win);
+			mvwprintw(win, 0, 24, "HP");
+			mvwprintw(win, 0, 26, "%d",hp);
+			wrefresh(win);
+			mvwprintw(win, 0, 29, "Score");
+			mvwprintw(win, 0, 34, "%d",score);
+			wrefresh(win);
+			wattroff(win, A_REVERSE);
+		}
+	}
+	getch();
+	endwin();
+}
