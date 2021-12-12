@@ -236,21 +236,21 @@ int main(){
 			wattroff(win, A_REVERSE);
 			
 			//soal
-			mvwprintw(win, 2, 1, "1. Seniman Asli Betawi ?");
+			mvwprintw(win, 2, 1, "1. Ibukota dari negara Cina adalah?");
 			wrefresh(win);
-			mvwprintw(win, 4, 4, "a. Benyamin Syueb");
+			mvwprintw(win, 4, 4, "a. Beijing");
 			wrefresh(win);
-			mvwprintw(win, 6, 4, "b. Putut Wijayab");
+			mvwprintw(win, 6, 4, "b. Seoul");
 			wrefresh(win);
-			mvwprintw(win, 8, 4, "c. Parto");
+			mvwprintw(win, 8, 4, "c. Tokyo");
 			wrefresh(win);
-			mvwprintw(win, 10, 4, "d. Anang Hermansyah");
+			mvwprintw(win, 10, 4, "d. Pyongyang");
 			wrefresh(win);
 			mvwprintw(win, 12, 1, "Jawab Pertanyaan Diatas: ");
 			wrefresh(win);
 			jawab = wgetch(win);
 			mvwprintw(win, 13, 1, "Jawaban anda adalah %c",jawab);
-			mvwprintw(win, 18, 1, "*press ENTER to go to the next");
+			mvwprintw(win, 18, 1, "*press any key to go to the next");
 			wrefresh(win);
 			mvwprintw(win, 19, 1, "question");
 			wrefresh(win);
@@ -292,23 +292,23 @@ int main(){
 			wattroff(win, A_REVERSE);
 			
 			//soal
-			mvwprintw(win, 2, 1, "2. Yang Tidak Termasuk Panca Indra");
+			mvwprintw(win, 2, 1, "2. Kota terpadat KEDUA di dunia ");
 			wrefresh(win);
 			mvwprintw(win, 3, 1, "Adalah ?");
 			wrefresh(win);
-			mvwprintw(win, 5, 4, "a. mulut");
+			mvwprintw(win, 5, 4, "a. Delhi");
 			wrefresh(win);
-			mvwprintw(win, 7, 4, "b. hidung");
+			mvwprintw(win, 7, 4, "b. Jakarta");
 			wrefresh(win);
-			mvwprintw(win, 9, 4, "c. mata");
+			mvwprintw(win, 9, 4, "c. Tokyo");
 			wrefresh(win);
-			mvwprintw(win, 11, 4, "d. telinga");
+			mvwprintw(win, 11, 4, "d. New York");
 			wrefresh(win);
 			mvwprintw(win, 13, 1, "Jawab Pertanyaan Diatas: ");
 			wrefresh(win);
 			jawab = wgetch(win);
 			mvwprintw(win, 14, 1, "Jawaban anda adalah %c",jawab);
-			mvwprintw(win, 18, 1, "*press ENTER to go to the next");
+			mvwprintw(win, 18, 1, "*press any key to go to the next");
 			wrefresh(win);
 			mvwprintw(win, 19, 1, "question");
 			wrefresh(win);
@@ -350,23 +350,23 @@ int main(){
 			wattroff(win, A_REVERSE);
 			
 			//soal
-			mvwprintw(win, 2, 1, "3. Alat Untuk Memberitahukan Waktu");
+			mvwprintw(win, 2, 1, "3. Siapakah dibawah ini yang ");
 			wrefresh(win);
-			mvwprintw(win, 3, 1, "Adalah ?");
+			mvwprintw(win, 3, 1, "mengetik naskah proklamasi ?");
 			wrefresh(win);
-			mvwprintw(win, 5, 4, "a. Fan");
+			mvwprintw(win, 5, 4, "a. Ir. Soekarno");
 			wrefresh(win);
-			mvwprintw(win, 7, 4, "b. Televisi");
+			mvwprintw(win, 7, 4, "b. Moh. Hatta");
 			wrefresh(win);
-			mvwprintw(win, 9, 4, "c. Arloji");
+			mvwprintw(win, 9, 4, "c. Sayuti Melik");
 			wrefresh(win);
-			mvwprintw(win, 11, 4, "d. Oven");
+			mvwprintw(win, 11, 4, "d. Fatmawati");
 			wrefresh(win);
 			mvwprintw(win, 13, 1, "Jawab Pertanyaan Diatas: ");
 			wrefresh(win);
 			jawab = wgetch(win);
 			mvwprintw(win, 14, 1, "Jawaban anda adalah %c",jawab);
-			mvwprintw(win, 18, 1, "*press ENTER to go to the next");
+			mvwprintw(win, 18, 1, "*press any key to go to the next");
 			wrefresh(win);
 			mvwprintw(win, 19, 1, "question");
 			wrefresh(win);
@@ -443,7 +443,7 @@ int main(){
 			wrefresh(win);
 			jawab = wgetch(win);
 			mvwprintw(win, 13, 1, "Jawaban anda adalah %c",jawab);
-			mvwprintw(win, 18, 1, "*press ENTER to go to the next");
+			mvwprintw(win, 18, 1, "*press any key to go to the next");
 			wrefresh(win);
 			mvwprintw(win, 19, 1, "question");
 			wrefresh(win);
@@ -522,7 +522,7 @@ int main(){
 			wrefresh(win);
 			jawab = wgetch(win);
 			mvwprintw(win, 14, 1, "Jawaban anda adalah %c",jawab);
-			mvwprintw(win, 18, 1, "*press ENTER to go to the next");
+			mvwprintw(win, 18, 1, "*press any key to go to the next");
 			wrefresh(win);
 			mvwprintw(win, 19, 1, "question");
 			wrefresh(win);
